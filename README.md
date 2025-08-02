@@ -1,1 +1,1 @@
-# AdaMM-KD
+# AdaMM
