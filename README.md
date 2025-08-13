@@ -56,7 +56,7 @@ pip install -r requirements.txt
 To train our model in the paper, run this command:
 
 ```train
-python train.py
+python train_adamm_divide.py
 ```
 
 <p align="center">
