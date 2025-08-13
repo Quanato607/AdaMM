@@ -27,9 +27,9 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 </p>
 
 ## 🧗Proposed method
-<br><br>
-![](./imgs/fig1.png)
-<br><br>
+<p align="center">
+  <img src="./imgs/fig1.png" alt="Figure 1" width="90%">
+</p>
 
 **Framework overview**  (A) **Missing-modality Sampling** — Generates 15 MRI modality combinations and leverages an Adapter Bank to compensate for absent inputs.  (B) **Knowledge-distillation Training** — Incorporates **BBDM**, **GARM**, and **LGRM**, with **GARM** applied exclusively to the student branch.
 
@@ -59,24 +59,24 @@ To evaluate our model in the paper, run this command:
 python eval.py
 ```
 
-<br><br>
-![](./imgs/fig2.png)
-<br><br>
+<p align="center">
+  <img src="./imgs/fig2.png" alt="Figure 3" width="90%">
+</p>
 
 ## 🚀 Results of Performance
 
-<br><br>
-![](./imgs/fig9.png)
-<br><br>
+<p align="center">
+  <img src="./imgs/fig9.png" alt="Figure 3" width="90%">
+</p>
 
 ## 🚀 Results of Comparision Experiment
 
-<br><br>
-![](./imgs/fig8.png)
-<br><br>
+<p align="center">
+  <img src="./imgs/fig8.png" alt="Figure 3" width="90%">
+</p>
 
 ## 🚀 Results of Ablation Experiment
 
-<br><br>
-![](./imgs/fig7.png)
-<br><br>
+<p align="center">
+  <img src="./imgs/fig7.png" alt="Figure 3" width="90%">
+</p>
