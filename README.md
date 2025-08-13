@@ -17,20 +17,19 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 <img src="https://github.com/Quanato607/MST-KDNet/blob/main/imgs/implementation.gif" width="90%">
 </div>
 
-## ♦ Primary contributions
+## ◈ Primary contributions
 
-• **Style Matching with Adversarial Alignment** — boosts **robustness** even when **key modalities are missing**.  
+• Style matching with adversarial alignment boosts robustness without key modalities.  
 
-• **Modality-Specific Adapters** — enhance **weak input modalities** to deliver **balanced segmentation results**.  
+• Modality-specific adapters strengthen weak inputs for balanced segmentation results
 
-• **Lesion-Aware Priors** — reduce **false positives** and improve **cross-modal consistency**.  
+• Lesion-aware priors reduce false positives and improve cross-modal consistency
 
-• **Benchmark-Leading Performance** — ranks **top** in **missing-modality brain tumor segmentation** across public datasets.
+• Ranks top in benchmark for missing-modality brain tumor segmentation performance.
 
 
 ## 🧗Proposed method
-<br><br>
-![](./imgs/fig1.pdf)
-<br><br>
+<object data="./imgs/fig1.pdf" type="application/pdf" width="100%" height="500px"></object>
+
 
 The overall framework of **MST-KDNet**. The Teacher propagation processes all available modalities, while the student propagation accommodates incomplete inputs.
