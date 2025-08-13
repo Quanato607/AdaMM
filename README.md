@@ -19,19 +19,6 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 
 ## ◈ Related Works
 
-(a) **Data Generation** — An external generator synthesizes absent modalities, creating a complete four-channel input for the segmentation model.  
-
-(b) **Feature Generation** — The network learns to hallucinate modality-specific features internally when inputs are missing.  
-
-(c) **Sample Retrieval** — Retrieves training cases from modality-matched cohorts to substitute absent scans before segmentation.  
-
-(d) **Robustness Enhancement** — Trains with random modality dropout to segment directly from available scans.  
-
-(e) **Multi-task Learning** — An auxiliary decoder reconstructs absent modalities (red dashed arrows) while the main branch outputs the segmentation mask.  
-
-(f) **Knowledge Distillation** — A full-modality teacher guides a partial-modality student via feature and prediction alignment, improving accuracy under incomplete inputs.
-
-
 <p align="center">
   <img src="./imgs/fig5.png" alt="Figure 3" width="90%">
 </p>
