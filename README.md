@@ -1,4 +1,7 @@
-<h1 align="center"> N&nbsp;O&nbsp;&nbsp;M&nbsp;⬢&nbsp;D&nbsp;A&nbsp;L&nbsp;I&nbsp;T&nbsp;Y&nbsp;&nbsp;L&nbsp;E&nbsp;F&nbsp;T&nbsp;&nbsp;B&nbsp;E&nbsp;H&nbsp;I&nbsp;N&nbsp;D</h1>
+<h1 align="center">
+  N&nbsp;O&nbsp;｜&nbsp;M&nbsp;⬢&nbsp;D&nbsp;A&nbsp;L&nbsp;I&nbsp;T&nbsp;Y&nbsp;｜&nbsp;L&nbsp;E&nbsp;F&nbsp;T&nbsp;｜&nbsp;B&nbsp;E&nbsp;H&nbsp;I&nbsp;N&nbsp;D
+</h1>
+
 
 
 <div align="center">
