@@ -29,7 +29,9 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 
 
 ## 🧗Proposed method
-<object data="./imgs/fig1.pdf" type="application/pdf" width="100%" height="500px"></object>
+<br><br>
+![](./imgs/fig1.png)
+<br><br>
 
+**Framework overview**  (A) **Missing-modality Sampling** — Generates 15 MRI modality combinations and leverages an Adapter Bank to compensate for absent inputs.  (B) **Knowledge-distillation Training** — Incorporates **BBDM**, **GARM**, and **LGRM**, with **GARM** applied exclusively to the student branch.
 
-The overall framework of **MST-KDNet**. The Teacher propagation processes all available modalities, while the student propagation accommodates incomplete inputs.
