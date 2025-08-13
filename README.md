@@ -76,3 +76,20 @@ python eval.py
 ![](./imgs/fig2.png)
 <br><br>
 
+## 🚀 Results of Performance
+
+<br><br>
+![](./imgs/fig9.png)
+<br><br>
+
+## 🚀 Results of Comparision Experiment
+
+<br><br>
+![](./imgs/fig8.png)
+<br><br>
+
+## 🚀 Results of Ablation Experiment
+
+<br><br>
+![](./imgs/fig7.png)
+<br><br>
