@@ -27,9 +27,9 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 </p>
 
 ## 🧗Proposed method
-<p align="center">
-  <img src="./imgs/fig1.png" alt="Figure 1" width="90%">
-</p>
+<br><br>
+![](./imgs/fig1.png)
+<br><br>
 
 **Framework overview**  (A) **Missing-modality Sampling** — Generates 15 MRI modality combinations and leverages an Adapter Bank to compensate for absent inputs.  (B) **Knowledge-distillation Training** — Incorporates **BBDM**, **GARM**, and **LGRM**, with **GARM** applied exclusively to the student branch.
 
@@ -49,6 +49,10 @@ To train our model in the paper, run this command:
 python train.py
 ```
 
+<p align="center">
+  <img src="./imgs/fig2.png" alt="Figure 3" width="100%">
+</p>
+
 >📋 Before training, specify the data set and training configuration using the config.xml file
 
 ## 📃 Evaluation
@@ -59,23 +63,29 @@ To evaluate our model in the paper, run this command:
 python eval.py
 ```
 
+<br><br>
+![](./imgs/fig4.png)
+<br><br>
+
+## ⬢ Diversity of Adapters
+
 <p align="center">
-  <img src="./imgs/fig2.png" alt="Figure 3" width="90%">
+  <img src="./imgs/fig10.png" alt="Figure 3" width="90%">
 </p>
 
-## 🚀 Results of Performance
+## ⬢ Results of Performance
 
 <p align="center">
   <img src="./imgs/fig9.png" alt="Figure 3" width="90%">
 </p>
 
-## 🚀 Results of Comparision Experiment
+## ⬢ Results of Comparision Experiment
 
 <p align="center">
   <img src="./imgs/fig8.png" alt="Figure 3" width="90%">
 </p>
 
-## 🚀 Results of Ablation Experiment
+## ⬢ Results of Ablation Experiment
 
 <p align="center">
   <img src="./imgs/fig7.png" alt="Figure 3" width="90%">
