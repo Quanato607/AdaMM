@@ -27,6 +27,12 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 
 • Ranks top in benchmark for missing-modality brain tumor segmentation performance.
 
+<p align="center">
+  <img src="./imgs/fig5.png" alt="Figure 3" width="90%">
+</p>
+<p align="center">
+  <img src="./imgs/fig6.png" alt="Figure 3" width="90%">
+</p>
 
 ## 🧗Proposed method
 <br><br>
@@ -34,4 +40,34 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 <br><br>
 
 **Framework overview**  (A) **Missing-modality Sampling** — Generates 15 MRI modality combinations and leverages an Adapter Bank to compensate for absent inputs.  (B) **Knowledge-distillation Training** — Incorporates **BBDM**, **GARM**, and **LGRM**, with **GARM** applied exclusively to the student branch.
+
+## 📝 Requirements
+
+To install requirements:
+
+```setup
+pip install -r requirements.txt
+```
+
+## 🔥 Training
+
+To train our model in the paper, run this command:
+
+```train
+python train.py
+```
+
+>📋 Before training, specify the data set and training configuration using the config.xml file
+
+## 📃 Evaluation
+
+To evaluate our model in the paper, run this command:
+
+```eval
+python eval.py
+```
+
+<br><br>
+![](./imgs/fig2.png)
+<br><br>
 
