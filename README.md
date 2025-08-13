@@ -17,7 +17,7 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 <img src="https://github.com/Quanato607/MST-KDNet/blob/main/imgs/implementation.gif" width="90%">
 </div>
 
-## ◈ Related Works
+## ⬢ Related Works
 
 <p align="center">
   <img src="./imgs/fig5.png" alt="Figure 3" width="90%">
@@ -33,7 +33,7 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 
 **Framework overview**  (A) **Missing-modality Sampling** — Generates 15 MRI modality combinations and leverages an Adapter Bank to compensate for absent inputs.  (B) **Knowledge-distillation Training** — Incorporates **BBDM**, **GARM**, and **LGRM**, with **GARM** applied exclusively to the student branch.
 
-## 📝 Requirements
+## ⬢ Requirements
 
 To install requirements:
 
@@ -41,7 +41,7 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-## 🔥 Training
+## ⬢ Training
 
 To train our model in the paper, run this command:
 
@@ -55,7 +55,7 @@ python train.py
 
 >📋 Before training, specify the data set and training configuration using the config.xml file
 
-## 📃 Evaluation
+## ⬢ Evaluation
 
 To evaluate our model in the paper, run this command:
 
