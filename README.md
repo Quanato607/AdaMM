@@ -17,15 +17,7 @@ This implementation of **No Modality Left Behind: Adapting to Missing Modalities
 <img src="https://github.com/Quanato607/MST-KDNet/blob/main/imgs/implementation.gif" width="90%">
 </div>
 
-## ◈ Primary contributions
-
-• Style matching with adversarial alignment boosts robustness without key modalities.  
-
-• Modality-specific adapters strengthen weak inputs for balanced segmentation results
-
-• Lesion-aware priors reduce false positives and improve cross-modal consistency
-
-• Ranks top in benchmark for missing-modality brain tumor segmentation performance.
+## ◈ Related Works
 
 <p align="center">
   <img src="./imgs/fig5.png" alt="Figure 3" width="90%">
