@@ -2,7 +2,7 @@
    N&nbsp;O&nbsp;｜&nbsp;M&nbsp;⬢&nbsp;D&nbsp;A&nbsp;L&nbsp;I&nbsp;T&nbsp;Y&nbsp;｜&nbsp;L&nbsp;E&nbsp;F&nbsp;T&nbsp;｜&nbsp;B&nbsp;E&nbsp;H&nbsp;I&nbsp;N&nbsp;D
 </h1>
 
-
+> It serves not only as a model, but also as a benchmark.
 
 <div align="center">
 
