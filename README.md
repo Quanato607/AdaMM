@@ -2,7 +2,7 @@
    N&nbsp;O&nbsp;｜&nbsp;M&nbsp;⬢&nbsp;D&nbsp;A&nbsp;L&nbsp;I&nbsp;T&nbsp;Y&nbsp;｜&nbsp;L&nbsp;E&nbsp;F&nbsp;T&nbsp;｜&nbsp;B&nbsp;E&nbsp;H&nbsp;I&nbsp;N&nbsp;D
 </h1>
 
-<p align="center"><b>It serves not only as a paper, but also as a model / benchmark / software.</b></p>
+<p align="center"><b>This is more than a paper. It is also a model, benchmark, and software.</b></p>
 
 
 <div align="center">
