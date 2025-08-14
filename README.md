@@ -79,6 +79,24 @@ python eval.py
 
 > **Lesion-Presence-Guided Reliability Module** — For each slice, voxel-level probability maps from the student (left) and teacher (right) are aligned with the ground-truth label map (centre) using voxel-wise mean-squared error. At the same time, the three lesion classes (**NET**, **ET**, **ED**) are collapsed into existence scores, which are then matched to the binary presence vector of the label via an entropy loss.
 
+## ⬢ Special Handling of HD95 in Brain Tumor Segmentation
+
+Because **HD95** is defined as the 95th percentile distance between the boundary points of the predicted segmentation map and the ground truth label map, its value is theoretically infinite when either map contains no lesion and therefore has no boundary. In practice, however, an infinite value cannot be directly displayed or aggregated as a valid metric. Consequently, various studies adopt different handling strategies under the many modality–missing scenarios, leading to inconsistent evaluation results.
+
+A survey and reproduction of current missing–modality segmentation literature reveal **three mainstream approaches** to these special HD95 cases:
+
+### Strategy 1: HD95 = 0 when only one map contains lesions
+When only the prediction or the label map contains lesions, set **HD95** to `0`.  
+This strategy treats the absence of a common boundary as “optimal”, directly assigning HD95 = 0. We argue that it grossly underestimates segmentation error: when one map contains lesions and the other does not, the model clearly produces false positives or false negatives, yet is erroneously rated best. This approach often drives HD95 to trend inversely with **Dice**, especially in the **BraTS** dataset, where the WT, TC, and ET regions may legitimately contain no lesions, thereby misleading model assessment.
+
+### Strategy 2: Conditional assignment (393.13 or 0)
+When the label map lacks lesions but the prediction map contains lesions, set **HD95** to `393.13`; otherwise, set it to `0`.  
+Compared with Strategy 1, this method prevents some misjudgments, but a notable bias remains: when the prediction map lacks lesions and the label map contains lesions (i.e., a miss), HD95 is still zero and therefore fails to capture the severity of the error. This asymmetric treatment continues to distort the metric and lowers evaluation accuracy.
+
+### Strategy 3: Uniform penalty for mutually exclusive lesions
+When the prediction and label maps are mutually exclusive (i.e., lesions in one but not the other), set **HD95** uniformly to `393.13`.  
+We consider this strategy most consistent with evaluation logic and practical needs. It substitutes infinity with the maximum spatial diagonal (240 × 240 × 155) distance commonly encountered in images, ensuring that HD95 imposes a severe penalty for major false positives or false negatives. Additionally, it maintains a positive correlation with other metrics such as **Dice** and **IoU** across all prediction–label combinations, thereby improving evaluative consistency and stability.
+
 
 ## ⬢ Diversity of Adapters
 
