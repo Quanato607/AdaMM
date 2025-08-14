@@ -13,7 +13,6 @@
 [![](https://img.shields.io/badge/arXiv-2403.01427-green.svg)](https://arxiv.org/abs/2030.12345)
 </div>
 
-<p align="center"><b>**Adapting to Missing Modalities via Knowledge Distillation for Brain Tumor Segmentation**</b></p>
 
 ## 🎥 Visualization for Implementation on Software
 
