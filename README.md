@@ -14,11 +14,12 @@
 </div>
 
 
-## 🎥 Visualization for Implementation on Software
 
 <div align="center">
 <img src="https://github.com/Quanato607/MST-KDNet/blob/main/imgs/implementation.gif" width="90%">
 </div>
+
+> <p align="center"><b>Visualization for Implementation on Software.</b></p>
 
 ## ⬢ Related Works
 
