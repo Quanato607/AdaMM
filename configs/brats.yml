@@ -2,7 +2,7 @@
 lr:              1e-4 # Initial learning rate
 weight_decay:    1e-5
 power:           0.9
-epochs:          200 # Number of epochs to train the model   
+epochs:          400 # Number of epochs to train the model   
 number_classes:  4 # Number of classes in the target dataset
 batch_size_tr:   1 # Batch size for train
 batch_size_va:   1 # Batch size for validationn 
