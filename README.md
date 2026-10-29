@@ -66,11 +66,46 @@ python train_adamm_divide.py
 
 ## ⬢ Evaluation
 
-To evaluate our model in the paper, run this command:
+Evaluate a trained student checkpoint on the `test/` split:
 
-```eval
-python eval.py
+```bash
+python eval.py \
+  --config configs/brats.yml \
+  --checkpoint /path/to/model_best.pth \
+  --data-root /path/to/BraTS2024 \
+  --output eval_results.csv
 ```
+
+For FeTS, use `--config configs/fets.yml` and its dataset root. The root must
+contain `test/BraTS*/` (BraTS) or `test/FeTS*/` (FeTS) patient folders; no training
+split is required. Each folder contains `<patient>-{t2f,t1n,t1c,t2w,seg}.nii.gz`
+for BraTS, or `<patient>_{flair,t1,t1ce,t2,seg}.nii.gz` for FeTS. If `--data-root`
+is omitted, the script uses `path_to_data` from the config.
+
+The checkpoint is required: use a trusted checkpoint produced by training
+(the `model_missing` weights), or an exported student state dictionary. The
+script uses the published AdaMM architecture and loads weights strictly; it
+does not fall back to random weights when a checkpoint is missing or incompatible.
+
+By default, all 15 nonempty modality combinations are evaluated. `--masks 1111`
+evaluates only the full-modality input; `--masks 0001 1111` evaluates T2 and all
+modalities. Bits follow the **config channel order**: `t2f, t1n, t1c, t2w`
+for BraTS and `flair, t1, t1ce, t2` for FeTS (FLAIR, T1, T1ce, T2).
+Use `--device cpu` or `--device cuda:0` to select a device (default: CUDA when
+available, otherwise CPU). `--batch-size` defaults to 1 and `--num-workers` to 0.
+Run `python eval.py --help` for all options.
+
+Evaluation uses `model.eval()` and inference mode, without updating weights or
+BatchNorm statistics. It retains the dataset's normalization and center crop
+(`inputshape`), and the existing `> 0.5` lesion-presence gate and segmentation
+threshold. CSV rows report the patient count and per-patient mean/population
+standard deviation of Dice, HD95, Sensitivity and IoU for WT/TC/ET. Overlap
+metrics use smoothing 1.0; sensitivity uses the ground-truth positive count as
+its denominator. HD95 uses `binary.py` with unit voxel spacing: both masks empty
+gives 0, and exactly one empty gives **373.13**, the current code's penalty
+(distinct from the 393.13 discussed below). This standalone evaluator freezes
+BatchNorm and disables dropout, unlike the legacy inline `test_val`; scores
+should not be assumed identical to that training-mode evaluation.
 
 <br><br>
 ![](./imgs/fig4.png)
