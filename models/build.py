@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 from .unet import Unet_module, UNet3D
-from .smunetr import SMUNetr
 from .AdaMMKD import AdaMMKD
-from .AdaMMKD_old import AdaMMKD_old
-from .AdaMMKD_wo_GARM import AdaMMKD_wo_GARM
-from .AdaMMKD_wo_LPGM import AdaMMKD_wo_LPGM
 
 def build_model(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
     model_full    = UNet3D(inp_shape,
@@ -22,6 +18,10 @@ def build_model(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
     return model_full, model_missing
 
 def build_smunetr(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
+    # Keep this optional model import local so the core AdaMMKD entry point can
+    # be used from a source checkout that does not include SMUNetr.
+    from .smunetr import SMUNetr
+
     model_full    = SMUNetr(inp_shape,
                       in_channels=inp_dim1,
                       out_channels=4,
@@ -36,6 +36,8 @@ def build_smunetr(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
     return model_full, model_missing
 
 def build_AdaMMKD_old(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
+    from .AdaMMKD_old import AdaMMKD_old
+
     model_full    = AdaMMKD_old(inp_shape,
                       in_channels=inp_dim1,
                       out_channels=4,
@@ -64,6 +66,8 @@ def build_AdaMMKD(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
     return model_full, model_missing
 
 def build_AdaMMKD_wo_GARM(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
+    from .AdaMMKD_wo_GARM import AdaMMKD_wo_GARM
+
     model_full    = AdaMMKD_wo_GARM(inp_shape,
                       in_channels=inp_dim1,
                       out_channels=4,
@@ -78,6 +82,8 @@ def build_AdaMMKD_wo_GARM(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1)
     return model_full, model_missing
 
 def build_AdaMMKD_wo_LPGM(inp_shape = (160, 192, 128), inp_dim1=4, inp_dim2 = 1):
+    from .AdaMMKD_wo_LPGM import AdaMMKD_wo_LPGM
+
     model_full    = AdaMMKD_wo_LPGM(inp_shape,
                       in_channels=inp_dim1,
                       out_channels=4,
